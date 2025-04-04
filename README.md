@@ -29,13 +29,14 @@ Projekt został zrealizowany na podstawie przykładu aplikacji **Tipper**, dosta
 3. Uruchom aplikację na emulatorze lub urządzeniu fizycznym z systemem Android.
 
 ### Kalkulator BMI
-![BMI Kalkulator](screenshots/bmiCalc_1.png)
+![BMI Kalkulator](app/screenshots/bmiCalc_1.png)
 
 ### Rekomendowane przepisy
-![Recipes](screenshots/recipes.png)
+![Recipes](app/screenshots/recipes.png)
 
 ### Kalkulator kalorii
-![Kalorie](screenshots/activityCalc.png)
+![Kalorie](app/screenshots/activityCalc.png)
+
 ---
 
 _Projekt zaliczeniowy z przedmiotu PAMO 2022_
