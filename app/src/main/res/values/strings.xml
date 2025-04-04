@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">BMICalculator</string>
+    <string-array name="activity_levels">
+        <item>Wybierz poziom aktywności</item>
+        <item>Niski (mało ruchu)</item>
+        <item>Umiarkowany</item>
+        <item>Aktywny</item>
+        <item>Bardzo aktywny</item>
+    </string-array>
+
 </resources>
