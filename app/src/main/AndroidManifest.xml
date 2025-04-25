@@ -10,7 +10,6 @@
         android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
 
         <activity android:name=".RecipeActivity" />
-        <activity android:name=".CalorieCalculatorActivity" />
         <activity android:name=".BMICalculatorActivity" />
         <activity android:name=".MainActivity" />
 

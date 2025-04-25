@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void openCalorieCalculator() {
-        Intent intent = new Intent(MainActivity.this, CalorieCalculatorActivity.class);
+        Intent intent = new Intent(MainActivity.this, BMICalculatorActivity.class);
         startActivity(intent);
     }
 
