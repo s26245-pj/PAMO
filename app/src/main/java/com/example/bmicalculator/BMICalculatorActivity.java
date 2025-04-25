@@ -1,8 +1,10 @@
 package com.example.bmicalculator;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class BMICalculatorActivity extends AppCompatActivity {
@@ -10,6 +12,7 @@ public class BMICalculatorActivity extends AppCompatActivity {
     EditText weightInput, heightInput;
     Button calculateBtn;
     TextView resultText;
+    Button showRecommendationsButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,8 +23,25 @@ public class BMICalculatorActivity extends AppCompatActivity {
         heightInput = findViewById(R.id.heightInput);
         calculateBtn = findViewById(R.id.calculateBtn);
         resultText = findViewById(R.id.resultText);
+        showRecommendationsButton = findViewById(R.id.showRecommendationsButton);
 
-        calculateBtn.setOnClickListener(view -> calculateBMI());
+        calculateBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calculateBMI();
+            }
+        });
+
+        showRecommendationsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BMICalculatorActivity.this, RecommendationActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // Początkowo ukryj przycisk z zaleceniami
+        showRecommendationsButton.setVisibility(View.GONE);
     }
 
     private void calculateBMI() {
@@ -38,9 +58,11 @@ public class BMICalculatorActivity extends AppCompatActivity {
             else result = "Otyłość";
 
             resultText.setText(String.format("BMI: %.2f\nStatus: %s", bmi, result));
+            showRecommendationsButton.setVisibility(View.VISIBLE);
 
         } catch (Exception e) {
-            resultText.setText("Błąd: nieprawidłowe dane.");
+            Toast.makeText(this, "Wprowadź prawidłowe dane", Toast.LENGTH_SHORT).show();
+            showRecommendationsButton.setVisibility(View.GONE);
         }
     }
 }

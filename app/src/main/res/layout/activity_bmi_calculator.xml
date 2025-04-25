@@ -1,41 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="24dp"
-    android:paddingTop="24dp"
-    android:fitsSystemWindows="true"
-    android:gravity="center_horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/weightInput"
-        android:hint="Waga (kg)"
-        android:inputType="numberDecimal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+            android:id="@+id/weightInput"
+            android:hint="Waga (kg)"
+            android:inputType="numberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
     <EditText
-        android:id="@+id/heightInput"
-        android:hint="Wzrost (cm)"
-        android:inputType="numberDecimal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"/>
+            android:id="@+id/heightInput"
+            android:hint="Wzrost (cm)"
+            android:inputType="numberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
 
     <Button
-        android:id="@+id/calculateBtn"
-        android:text="OBLICZ BMI"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"/>
+            android:id="@+id/calculateBtn"
+            android:text="Oblicz BMI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" />
 
     <TextView
-        android:id="@+id/resultText"
-        android:text="Wynik:"
-        android:textSize="18sp"
-        android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+            android:id="@+id/resultText"
+            android:text="Wynik pojawi się tutaj"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_marginTop="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    <Button
+            android:id="@+id/showRecommendationsButton"
+            android:text="Pokaż zalecenia"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" />
+
 </LinearLayout>
