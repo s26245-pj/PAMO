@@ -1,73 +1,112 @@
-<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F0F4F8"
+    android:padding="16dp">
 
-<LinearLayout
-    android:orientation="vertical"
-    android:padding="24dp"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-    <EditText
-        android:id="@+id/ageInput"
-        android:hint="Wiek"
-        android:inputType="number"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <EditText
-        android:id="@+id/weightInput"
-        android:hint="Waga (kg)"
-        android:inputType="numberDecimal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <EditText
-        android:id="@+id/heightInput"
-        android:hint="Wzrost (cm)"
-        android:inputType="numberDecimal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <RadioGroup
-        android:id="@+id/genderGroup"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:background="#FFFFFF"
+        android:padding="24dp"
+        android:elevation="4dp"
+        android:clipToPadding="false"
+        android:layout_margin="16dp">
 
-        <RadioButton
-            android:id="@+id/radioMale"
-            android:text="Mężczyzna"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/weightInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Weight (kg)"
+            android:inputType="numberDecimal"
+            android:padding="12dp"
+            android:textColor="#333333"
+            android:textSize="16sp" />
 
-        <RadioButton
-            android:id="@+id/radioFemale"
-            android:text="Kobieta"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </RadioGroup>
+        <EditText
+            android:id="@+id/heightInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Height (cm)"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="12dp"
+            android:padding="12dp"
+            android:textColor="#333333"
+            android:textSize="16sp" />
 
-    <Spinner
-        android:id="@+id/activityLevel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"/>
+        <EditText
+            android:id="@+id/ageInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Age (years)"
+            android:inputType="number"
+            android:layout_marginTop="12dp"
+            android:padding="12dp"
+            android:textColor="#333333"
+            android:textSize="16sp" />
 
-    <Button
-        android:id="@+id/calculateCaloriesBtn"
-        android:text="Oblicz kalorie"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"/>
+        <TextView
+            android:layout_marginTop="16dp"
+            android:text="Gender"
+            android:textColor="#555555"
+            android:textSize="14sp"
+            android:textStyle="bold" android:layout_height="wrap_content" android:layout_width="match_parent"/>
 
-    <TextView
-        android:id="@+id/resultText"
-        android:text="Wynik:"
-        android:textSize="18sp"
-        android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-</LinearLayout>
+        <Spinner
+            android:id="@+id/genderSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:text="Activity Level"
+            android:textColor="#555555"
+            android:textSize="14sp"
+            android:textStyle="bold"  android:layout_height="wrap_content" android:layout_width="match_parent"/>
+
+        <Spinner
+            android:id="@+id/activitySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/calculateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:padding="12dp"
+            android:textAllCaps="false"
+            android:elevation="4dp" />
+
+        <TextView
+            android:id="@+id/calorieResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Result: -"
+            android:textSize="18sp"
+            android:textColor="#222222"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="24dp" />
+
+        <Button
+            android:id="@+id/showRecommendationsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show Recipe Recommendations"
+            android:visibility="gone"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#2196F3"
+            android:textColor="#FFFFFF"
+            android:padding="12dp"
+            android:textAllCaps="false"
+            android:elevation="4dp" />
+
+    </LinearLayout>
 </ScrollView>

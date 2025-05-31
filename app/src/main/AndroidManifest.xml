@@ -9,11 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
 
-        <activity android:name=".RecipeActivity" />
-        <activity android:name=".CalorieCalculatorActivity" />
-        <activity android:name=".BMICalculatorActivity" />
-        <activity android:name=".MainActivity" />
-
+        <!-- Główna aktywność startowa -->
         <activity
             android:name=".SplashActivity"
             android:exported="true">
@@ -22,6 +18,13 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <!-- Aktywności aplikacji -->
+        <activity android:name=".MainActivity" />
+        <activity android:name=".CalorieCalculatorActivity" />
+        <activity android:name=".RecipeRecommendationActivity" />
+        <activity android:name=".BmiChartActivity" />
+
     </application>
 
 </manifest>
